@@ -6,25 +6,25 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      content: 'hello@platinummarketing.io',
-      link: 'mailto:hello@platinummarketing.io',
+      content: 'helloplatinummarketing@gmail.com',
+      link: 'mailto:helloplatinummarketing@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      content: '(555) 123-4567',
-      link: 'tel:+15551234567',
+      content: '07594217753',
+      link: 'tel:+447594217753',
     },
     {
       icon: MapPin,
-      title: 'Office',
-      content: '123 Marketing Ave, Tech City, TC 12345',
+      title: 'Location',
+      content: 'Bristol, UK (private office — no in-person visits)',
       link: null,
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      content: 'Mon-Fri: 9:00 AM - 6:00 PM EST',
+      content: 'Open 7 days a week',
       link: null,
     },
   ];
@@ -90,10 +90,10 @@ export function Contact() {
               <div className="text-center p-8">
                 <MapPin className="w-16 h-16 text-slate-400 mx-auto mb-4" />
                 <p className="text-slate-600">
-                  Interactive map would be displayed here
+                  Bristol, United Kingdom
                 </p>
                 <p className="text-sm text-slate-500 mt-2">
-                  123 Marketing Ave, Tech City, TC 12345
+                  Private office — Online consultations only
                 </p>
               </div>
             </div>

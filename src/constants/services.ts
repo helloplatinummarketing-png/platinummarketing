@@ -1,4 +1,7 @@
 export const SERVICES = [
+  'Starter Package — Lead Launch',
+  'Growth Package — Client Flow',
+  'Scale Package — Automation Pro',
   'Lead Capture & CRM Integration',
   'Customer Support Ticket Management',
   'Appointment Setting',

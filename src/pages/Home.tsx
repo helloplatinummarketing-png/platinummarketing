@@ -38,29 +38,31 @@ export function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20 sm:py-32">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              Automate Your Success with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+              Automate. Scale. Dominate.
+            </h1>
+            <p className="text-lg sm:text-xl text-slate-600 mb-4 leading-relaxed">
+              AI-powered marketing systems that run your business on autopilot.
+            </p>
+            <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed">
+              Transform your business with intelligent automation solutions from{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-700 font-bold">
                 Platinum Marketing
               </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
-              Transform your business with intelligent automation solutions that capture leads,
-              manage relationships, and drive conversions while you focus on what matters most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/landing">
                 <Button size="lg" className="group">
-                  Get Started Now
+                  Book a Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link to="/services">
+              <Link to="/pricing">
                 <Button variant="outline" size="lg">
-                  Explore Services
+                  View Packages
                 </Button>
               </Link>
             </div>
