@@ -21,7 +21,6 @@ export function Pricing() {
         'Appointment booking setup (Calendly)',
         '1 automation workflow (form → email → CRM)',
       ],
-      tools: ['Bolt.ai', 'Netlify', 'Airtable', 'Calendly', 'Make.com'],
       cta: 'Get Started',
       popular: false,
     },
@@ -42,7 +41,6 @@ export function Pricing() {
         'AI chatbot for FAQs (Voiceflow)',
         'SEO setup (on-page + Google My Business optimisation)',
       ],
-      tools: ['Voiceflow', 'Airtable', 'Calendly', 'Make.com', 'Netlify'],
       cta: 'Book a Consultation',
       popular: true,
     },
@@ -63,7 +61,6 @@ export function Pricing() {
         'Advanced performance dashboard (Supabase/Notion)',
         'Priority support + monthly optimisation meeting',
       ],
-      tools: ['Bland AI / Vapi AI', 'Voiceflow', 'Airtable', 'Make.com', 'Netlify', 'OpenAI'],
       cta: 'Talk to an Expert',
       popular: false,
     },
@@ -188,22 +185,6 @@ export function Pricing() {
                         </li>
                       ))}
                     </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wide">
-                      Tools:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {plan.tools.map((tool, tIndex) => (
-                        <span
-                          key={tIndex}
-                          className={`${colors.badge} text-xs px-2 py-1 rounded-full font-medium`}
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
                   </div>
 
                   <div className="mb-4">

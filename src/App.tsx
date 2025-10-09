@@ -8,6 +8,7 @@ import { Pricing } from './pages/Pricing';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 import { Landing } from './pages/Landing';
+import { ThankYou } from './pages/ThankYou';
 import { Login } from './pages/dashboard/Login';
 import { Dashboard } from './pages/dashboard/Dashboard';
 
@@ -27,6 +28,7 @@ function App() {
         />
 
         <Route path="/landing" element={<Landing />} />
+        <Route path="/thank-you" element={<ThankYou />} />
 
         <Route
           path="/*"

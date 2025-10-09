@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CheckCircle, Zap, TrendingUp, Users, Clock } from 'lucide-react';
 import { Input } from '../components/ui/Input';
 import { Textarea } from '../components/ui/Textarea';
 import { Select } from '../components/ui/Select';
 import { Button } from '../components/ui/Button';
-import { Modal } from '../components/ui/Modal';
 import { Loading } from '../components/ui/Loading';
 import { SERVICES } from '../constants/services';
 import { leadService } from '../services/leads';
 
 export function Landing() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
@@ -21,7 +22,6 @@ export function Landing() {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
@@ -64,22 +64,13 @@ export function Landing() {
 
       if (error) {
         alert('Failed to submit form. Please try again.');
+        setIsSubmitting(false);
         return;
       }
 
-      setShowSuccessModal(true);
-      setFormData({
-        full_name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service_interested: SERVICES[0],
-        message: '',
-      });
-      setErrors({});
+      navigate('/thank-you');
     } catch (error) {
       alert('An unexpected error occurred. Please try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -299,28 +290,6 @@ export function Landing() {
           </div>
         </div>
       </div>
-
-      <Modal
-        isOpen={showSuccessModal}
-        onClose={() => setShowSuccessModal(false)}
-        title="Thank You!"
-      >
-        <div className="text-center py-6">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle className="w-10 h-10 text-green-500" />
-          </div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-3">
-            Your Request Has Been Received
-          </h3>
-          <p className="text-slate-600 mb-6">
-            We've received your consultation request and will be in touch within 24 hours.
-            Check your email for a confirmation message.
-          </p>
-          <Button onClick={() => setShowSuccessModal(false)} fullWidth>
-            Close
-          </Button>
-        </div>
-      </Modal>
     </div>
   );
 }
