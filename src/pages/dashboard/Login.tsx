@@ -26,7 +26,7 @@ export function Login() {
         formData.password
       );
 
-      if (authError || !data.session) {
+      if (authError || !data?.session) {
         setError('Invalid email or password');
         return;
       }

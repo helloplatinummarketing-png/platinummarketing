@@ -16,7 +16,7 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
 
   const checkAuth = async () => {
     const { data } = await authService.getSession();
-    setIsAuthenticated(!!data.session);
+    setIsAuthenticated(!!data?.session);
   };
 
   if (isAuthenticated === null) {
